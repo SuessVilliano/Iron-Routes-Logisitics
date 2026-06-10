@@ -38,7 +38,7 @@ export default function FAQSection() {
   const [open, setOpen] = useState<number | null>(null)
 
   return (
-    <section className="py-20 bg-gray-50 dark:bg-navy-900/50" aria-labelledby="faq-heading">
+    <section className="py-16 bg-gray-50 dark:bg-navy-900/50" aria-labelledby="faq-heading">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
           <span className="text-electric-500 dark:text-electric-400 text-xs font-bold tracking-widest uppercase mb-3 block">FAQ</span>

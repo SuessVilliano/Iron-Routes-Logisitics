@@ -15,15 +15,20 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-html {
+html, body {
+  overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
 body {
   font-family: 'Inter', system-ui, sans-serif;
   transition: background-color 0.3s, color 0.3s;
+  /* Prevent any element from extending document height beyond content */
+  position: relative;
 }
 
 /* Animated grid/route pattern */

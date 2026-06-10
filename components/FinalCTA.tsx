@@ -4,7 +4,7 @@ import { ArrowRight, Phone, Mail } from 'lucide-react'
 export default function FinalCTA() {
   return (
     <section
-      className="py-20 bg-gradient-to-b from-gray-100 to-white dark:from-navy-900 dark:to-navy-950 relative overflow-hidden"
+      className="py-16 bg-gradient-to-b from-gray-100 to-white dark:from-navy-900 dark:to-navy-950 relative overflow-hidden"
       aria-labelledby="final-cta-heading"
     >
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_70%_70%_at_50%_50%,rgba(10,132,255,0.07),transparent)] dark:bg-[radial-gradient(ellipse_70%_70%_at_50%_50%,rgba(10,132,255,0.1),transparent)]" />

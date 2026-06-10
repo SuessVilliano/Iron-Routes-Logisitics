@@ -11,19 +11,19 @@ export default function QuotePage() {
   return (
     <main>
       <Header />
-      <section className="min-h-screen pt-28 pb-20 bg-navy-950 relative overflow-hidden">
-        <div className="absolute inset-0 grid-pattern opacity-40" />
+      <section className="pt-28 pb-20 bg-white dark:bg-navy-950 relative overflow-hidden">
+        <div className="absolute inset-0 grid-pattern opacity-30 dark:opacity-40" />
         <div className="relative z-10 max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <span className="text-electric-400 text-xs font-bold tracking-widest uppercase block mb-4">Get Started</span>
-            <h1 className="text-4xl sm:text-5xl font-extrabold text-white mb-4">
+            <span className="text-electric-500 dark:text-electric-400 text-xs font-bold tracking-widest uppercase block mb-4">Get Started</span>
+            <h1 className="text-4xl sm:text-5xl font-extrabold text-slate-900 dark:text-white mb-4">
               Request a Freight Quote
             </h1>
-            <p className="text-silver-300 text-lg max-w-xl mx-auto">
+            <p className="text-slate-600 dark:text-silver-300 text-lg max-w-xl mx-auto">
               Fill out the form below and our team will respond quickly with availability and next steps.
             </p>
           </div>
-          <div className="bg-navy-800/50 rounded-2xl border border-electric-500/20 p-6 sm:p-10">
+          <div className="bg-gray-50 dark:bg-navy-800/50 rounded-2xl border border-gray-200 dark:border-electric-500/20 p-6 sm:p-10 shadow-sm dark:shadow-none">
             {/* GHL FORM WEBHOOK: Replace /api/contact in ContactForm with your GHL webhook URL */}
             <ContactForm />
           </div>

@@ -20,8 +20,8 @@ export default function CarriersPage() {
   return (
     <main>
       <Header />
-      <section className="pt-28 pb-16 bg-navy-950 relative overflow-hidden">
-        <div className="absolute inset-0 grid-pattern opacity-40" />
+      <section className="pt-28 pb-16 bg-white dark:bg-navy-950 relative overflow-hidden">
+        <div className="absolute inset-0 grid-pattern opacity-30 dark:opacity-40" />
         <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center gap-4 mb-6">
             <div className="w-12 h-12 rounded-xl bg-sky-400/10 border border-sky-400/20 flex items-center justify-center">
@@ -29,31 +29,31 @@ export default function CarriersPage() {
             </div>
             <span className="text-sky-400 text-xs font-bold tracking-widest uppercase">For Carriers</span>
           </div>
-          <h1 className="text-4xl sm:text-5xl font-extrabold text-white mb-4 max-w-2xl">
+          <h1 className="text-4xl sm:text-5xl font-extrabold text-slate-900 dark:text-white mb-4 max-w-2xl">
             Carrier Opportunities With Iron Routes
           </h1>
-          <p className="text-silver-300 text-lg max-w-2xl">
+          <p className="text-slate-600 dark:text-silver-300 text-lg max-w-2xl">
             Looking for consistent loads? Connect with Iron Routes Logistics and access freight opportunities with professional communication and reliable coordination.
           </p>
         </div>
       </section>
 
-      <section className="py-16 bg-navy-900/50">
+      <section className="py-16 bg-gray-50 dark:bg-navy-900/50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid md:grid-cols-2 gap-12">
             <div>
-              <h2 className="text-2xl font-extrabold text-white mb-4">What Iron Routes Offers Carriers</h2>
+              <h2 className="text-2xl font-extrabold text-slate-900 dark:text-white mb-4">What Iron Routes Offers Carriers</h2>
               <ul className="space-y-3">
                 {OFFERS.map(o => (
                   <li key={o} className="flex items-start gap-3">
                     <CheckCircle size={16} className="text-sky-400 mt-0.5 shrink-0" aria-hidden="true" />
-                    <span className="text-silver-300 text-sm">{o}</span>
+                    <span className="text-slate-700 dark:text-silver-300 text-sm">{o}</span>
                   </li>
                 ))}
               </ul>
             </div>
             <div>
-              <h2 className="text-2xl font-extrabold text-white mb-4">What We Look For</h2>
+              <h2 className="text-2xl font-extrabold text-slate-900 dark:text-white mb-4">What We Look For</h2>
               <ul className="space-y-3">
                 {[
                   'Active USDOT authority in good standing',
@@ -64,7 +64,7 @@ export default function CarriersPage() {
                 ].map(o => (
                   <li key={o} className="flex items-start gap-3">
                     <span className="w-1.5 h-1.5 rounded-full bg-sky-400 mt-2 shrink-0" aria-hidden="true" />
-                    <span className="text-silver-400 text-sm">{o}</span>
+                    <span className="text-slate-500 dark:text-silver-400 text-sm">{o}</span>
                   </li>
                 ))}
               </ul>
@@ -73,13 +73,13 @@ export default function CarriersPage() {
         </div>
       </section>
 
-      <section className="py-16 bg-navy-950" id="carrier-connect">
+      <section className="py-16 bg-white dark:bg-navy-950" id="carrier-connect">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-10">
-            <h2 className="text-3xl font-extrabold text-white mb-3">Connect With Our Team</h2>
-            <p className="text-silver-400">Tell us about your operation and we&apos;ll follow up quickly.</p>
+            <h2 className="text-3xl font-extrabold text-slate-900 dark:text-white mb-3">Connect With Our Team</h2>
+            <p className="text-slate-500 dark:text-silver-400">Tell us about your operation and we&apos;ll follow up quickly.</p>
           </div>
-          <div className="bg-navy-800/40 rounded-2xl border border-sky-400/15 p-6 sm:p-8">
+          <div className="bg-gray-50 dark:bg-navy-800/40 rounded-2xl border border-gray-200 dark:border-sky-400/15 p-6 sm:p-8 shadow-sm dark:shadow-none">
             <ContactForm defaultRole="Carrier" />
           </div>
         </div>

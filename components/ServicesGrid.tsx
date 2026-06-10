@@ -53,7 +53,7 @@ const item = {
 
 export default function ServicesGrid() {
   return (
-    <section className="py-20 bg-white dark:bg-navy-950" aria-labelledby="services-heading">
+    <section className="py-16 bg-white dark:bg-navy-950" aria-labelledby="services-heading">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
