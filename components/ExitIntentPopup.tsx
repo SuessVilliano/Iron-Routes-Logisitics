@@ -62,7 +62,7 @@ export default function ExitIntentPopup() {
     }
   }
 
-  const inputCls = 'w-full px-4 py-3 rounded-lg bg-navy-800 border border-electric-500/20 text-white placeholder-silver-400/50 text-sm focus:outline-none focus:border-electric-400 transition-all'
+  const inputCls = 'w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-navy-800 border border-gray-200 dark:border-electric-500/20 text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-silver-400/50 text-sm focus:outline-none focus:border-electric-500 dark:focus:border-electric-400 transition-all'
 
   return (
     <AnimatePresence>
@@ -81,11 +81,11 @@ export default function ExitIntentPopup() {
             initial={{ scale: 0.9, y: 20 }}
             animate={{ scale: 1, y: 0 }}
             exit={{ scale: 0.9, y: 20 }}
-            className="relative bg-navy-900 border border-electric-500/30 rounded-2xl shadow-2xl shadow-electric-500/20 max-w-md w-full p-7"
+            className="relative bg-white dark:bg-navy-900 border border-gray-200 dark:border-electric-500/30 rounded-2xl shadow-2xl shadow-electric-500/20 max-w-md w-full p-7"
           >
             <button
               onClick={close}
-              className="absolute top-4 right-4 p-1.5 text-silver-400 hover:text-white rounded-lg hover:bg-white/10 transition-all"
+              className="absolute top-4 right-4 p-1.5 text-slate-400 dark:text-silver-400 hover:text-slate-700 dark:hover:text-white rounded-lg hover:bg-gray-100 dark:hover:bg-white/10 transition-all"
               aria-label="Close popup"
             >
               <X size={18} />
@@ -93,18 +93,18 @@ export default function ExitIntentPopup() {
 
             {success ? (
               <div className="text-center py-6">
-                <CheckCircle size={40} className="text-electric-400 mx-auto mb-4" aria-hidden="true" />
-                <h3 className="text-xl font-bold text-white mb-2">Request Received</h3>
-                <p className="text-silver-400 text-sm">Iron Routes Logistics will follow up soon.</p>
+                <CheckCircle size={40} className="text-electric-500 dark:text-electric-400 mx-auto mb-4" aria-hidden="true" />
+                <h3 className="text-xl font-bold text-slate-900 dark:text-white mb-2">Request Received</h3>
+                <p className="text-slate-500 dark:text-silver-400 text-sm">Iron Routes Logistics will follow up soon.</p>
               </div>
             ) : (
               <>
                 <div className="mb-6">
-                  <span className="text-electric-400 text-xs font-bold tracking-widest uppercase block mb-2">Before You Go</span>
-                  <h2 id="exit-popup-heading" className="text-xl font-extrabold text-white mb-2">
+                  <span className="text-electric-500 dark:text-electric-400 text-xs font-bold tracking-widest uppercase block mb-2">Before You Go</span>
+                  <h2 id="exit-popup-heading" className="text-xl font-extrabold text-slate-900 dark:text-white mb-2">
                     Need Freight Support Before You Go?
                   </h2>
-                  <p className="text-silver-400 text-sm">
+                  <p className="text-slate-500 dark:text-silver-400 text-sm">
                     Send your route or shipment details and Iron Routes Logistics will follow up.
                   </p>
                 </div>

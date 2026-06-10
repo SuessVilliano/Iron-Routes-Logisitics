@@ -14,12 +14,11 @@ const INITIAL: FormData = {
   freight: '', timeline: '', message: '',
 }
 
-const inputCls = `w-full px-4 py-3 rounded-lg bg-navy-800/80 border border-electric-500/20
-  text-white placeholder-silver-400/50 text-sm focus:outline-none
-  focus:border-electric-400 focus:ring-1 focus:ring-electric-400/30 transition-all
-  [data-theme="light"]:bg-white [data-theme="light"]:text-navy-900`
+const inputCls = `w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-navy-800/80 border border-gray-200 dark:border-electric-500/20
+  text-slate-900 dark:text-white placeholder-slate-400 dark:placeholder-silver-400/50 text-sm focus:outline-none
+  focus:border-electric-500 dark:focus:border-electric-400 focus:ring-1 focus:ring-electric-500/30 dark:focus:ring-electric-400/30 transition-all`
 
-const labelCls = 'block text-sm font-medium text-silver-300 mb-1.5'
+const labelCls = 'block text-sm font-medium text-slate-700 dark:text-silver-300 mb-1.5'
 
 export default function ContactForm({ defaultRole = '' }: { defaultRole?: string }) {
   const [form, setForm] = useState<FormData>({ ...INITIAL, role: defaultRole })
@@ -45,7 +44,7 @@ export default function ContactForm({ defaultRole = '' }: { defaultRole?: string
       setSuccess(true)
       setForm({ ...INITIAL, role: defaultRole })
     } catch {
-      setError('Something went wrong. Please try again or call us directly.')
+      setError('Something went wrong. Please try again or call us at +1 (470) 316-4312.')
     } finally {
       setSubmitting(false)
     }
@@ -55,15 +54,15 @@ export default function ContactForm({ defaultRole = '' }: { defaultRole?: string
     return (
       <div className="flex flex-col items-center justify-center py-16 text-center">
         <div className="w-20 h-20 rounded-full bg-electric-500/10 border border-electric-500/30 flex items-center justify-center mb-5">
-          <CheckCircle size={36} className="text-electric-400" aria-hidden="true" />
+          <CheckCircle size={36} className="text-electric-500 dark:text-electric-400" aria-hidden="true" />
         </div>
-        <h3 className="text-2xl font-bold text-white mb-3">Request Received!</h3>
-        <p className="text-silver-300 max-w-md">
+        <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-3">Request Received!</h3>
+        <p className="text-slate-600 dark:text-silver-300 max-w-md">
           Thank you — Iron Routes Logistics received your request. We&apos;ll follow up within 1 business day.
         </p>
         <button
           onClick={() => setSuccess(false)}
-          className="mt-6 px-6 py-2.5 rounded-full border border-electric-500/40 text-electric-400 text-sm font-medium hover:bg-electric-500/10 transition-all"
+          className="mt-6 px-6 py-2.5 rounded-full border border-electric-500/40 text-electric-500 dark:text-electric-400 text-sm font-medium hover:bg-electric-500/10 transition-all"
         >
           Submit Another Request
         </button>
@@ -140,7 +139,7 @@ export default function ContactForm({ defaultRole = '' }: { defaultRole?: string
         </div>
       </div>
 
-      {error && <p className="mt-4 text-red-400 text-sm text-center" role="alert">{error}</p>}
+      {error && <p className="mt-4 text-red-500 dark:text-red-400 text-sm text-center" role="alert">{error}</p>}
 
       <div className="mt-6">
         <button

@@ -1,7 +1,7 @@
 import type { Config } from 'tailwindcss'
 
 const config: Config = {
-  darkMode: ['selector', '[data-theme="dark"]'],
+  darkMode: 'class',
   content: [
     './app/**/*.{js,ts,jsx,tsx,mdx}',
     './components/**/*.{js,ts,jsx,tsx,mdx}',
@@ -38,22 +38,31 @@ const config: Config = {
       },
       animation: {
         'marquee': 'marquee 30s linear infinite',
-        'pulse-slow': 'pulse 4s cubic-bezier(0.4,0,0.6,1) infinite',
-        'route-move': 'routeMove 3s ease-in-out infinite',
-        'fade-up': 'fadeUp 0.6s ease-out',
+        'float': 'float 6s ease-in-out infinite',
+        'pulse-glow': 'pulseGlow 2s ease-in-out infinite',
+        'road-lines': 'roadLines 2s linear infinite',
+        'scan': 'scan 3s linear infinite',
       },
       keyframes: {
         marquee: {
           '0%': { transform: 'translateX(0%)' },
           '100%': { transform: 'translateX(-50%)' },
         },
-        routeMove: {
-          '0%, 100%': { transform: 'translateX(0)' },
-          '50%': { transform: 'translateX(20px)' },
+        float: {
+          '0%, 100%': { transform: 'translateY(0px)' },
+          '50%': { transform: 'translateY(-12px)' },
         },
-        fadeUp: {
-          '0%': { opacity: '0', transform: 'translateY(20px)' },
-          '100%': { opacity: '1', transform: 'translateY(0)' },
+        pulseGlow: {
+          '0%, 100%': { boxShadow: '0 0 20px rgba(10,132,255,0.3)' },
+          '50%': { boxShadow: '0 0 40px rgba(10,132,255,0.7), 0 0 80px rgba(10,132,255,0.3)' },
+        },
+        roadLines: {
+          '0%': { transform: 'translateY(-100%)' },
+          '100%': { transform: 'translateY(100%)' },
+        },
+        scan: {
+          '0%': { transform: 'translateY(-100%)' },
+          '100%': { transform: 'translateY(400%)' },
         },
       },
     },

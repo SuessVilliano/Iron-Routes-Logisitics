@@ -70,8 +70,10 @@ const schemaData = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en" data-theme="dark" suppressHydrationWarning>
+    <html lang="en" className="dark" suppressHydrationWarning>
       <head>
+        {/* No-flash theme script — runs before paint */}
+        <script dangerouslySetInnerHTML={{ __html: `(function(){try{var t=localStorage.getItem('irl_theme');if(t==='light'){document.documentElement.classList.remove('dark')}else{document.documentElement.classList.add('dark')}}catch(e){}})()` }} />
         {/* GA4 SCRIPT GOES HERE */}
         {/* GTM SCRIPT GOES HERE */}
         {/* META PIXEL SCRIPT GOES HERE */}

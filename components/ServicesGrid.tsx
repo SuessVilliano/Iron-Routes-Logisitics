@@ -53,7 +53,7 @@ const item = {
 
 export default function ServicesGrid() {
   return (
-    <section className="py-20 bg-navy-950" aria-labelledby="services-heading">
+    <section className="py-20 bg-white dark:bg-navy-950" aria-labelledby="services-heading">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -62,13 +62,13 @@ export default function ServicesGrid() {
           transition={{ duration: 0.5 }}
           className="text-center mb-12"
         >
-          <span className="inline-block text-electric-400 text-xs font-bold tracking-widest uppercase mb-3">
+          <span className="inline-block text-electric-500 dark:text-electric-400 text-xs font-bold tracking-widest uppercase mb-3">
             What We Do
           </span>
-          <h2 id="services-heading" className="text-3xl sm:text-4xl font-extrabold text-white mb-4">
+          <h2 id="services-heading" className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mb-4">
             Logistics Services Built for Reliability
           </h2>
-          <p className="text-silver-400 max-w-2xl mx-auto">
+          <p className="text-slate-500 dark:text-silver-400 max-w-2xl mx-auto">
             From truckload freight to dispatch support, Iron Routes Logistics provides the services
             your supply chain depends on.
           </p>
@@ -87,16 +87,16 @@ export default function ServicesGrid() {
               <motion.div
                 key={s.title}
                 variants={item}
-                className="group p-6 rounded-2xl bg-navy-800/60 border border-electric-500/15 card-hover cursor-pointer"
+                className="group p-6 rounded-2xl bg-gray-50 dark:bg-navy-800/60 border border-gray-200 dark:border-electric-500/15 hover:border-electric-500/40 hover:-translate-y-1 transition-all duration-300 cursor-pointer"
               >
                 <div className="w-12 h-12 rounded-xl bg-electric-500/10 border border-electric-500/20 flex items-center justify-center mb-4 group-hover:bg-electric-500/20 transition-colors">
-                  <Icon size={22} className="text-electric-400" aria-hidden="true" />
+                  <Icon size={22} className="text-electric-500 dark:text-electric-400" aria-hidden="true" />
                 </div>
-                <h3 className="text-white font-bold text-lg mb-2">{s.title}</h3>
-                <p className="text-silver-400 text-sm leading-relaxed mb-4">{s.desc}</p>
+                <h3 className="text-slate-900 dark:text-white font-bold text-lg mb-2">{s.title}</h3>
+                <p className="text-slate-500 dark:text-silver-400 text-sm leading-relaxed mb-4">{s.desc}</p>
                 <Link
                   href={s.href}
-                  className="inline-flex items-center gap-1 text-electric-400 text-sm font-medium hover:gap-2 transition-all"
+                  className="inline-flex items-center gap-1 text-electric-500 dark:text-electric-400 text-sm font-medium hover:gap-2 transition-all"
                   aria-label={`Learn more about ${s.title}`}
                 >
                   Learn More <ArrowRight size={14} />
@@ -109,7 +109,7 @@ export default function ServicesGrid() {
         <div className="text-center mt-10">
           <Link
             href="/services"
-            className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full border border-electric-500/40 text-electric-400 font-semibold hover:bg-electric-500/10 transition-all"
+            className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full border border-electric-500/40 text-electric-500 dark:text-electric-400 font-semibold hover:bg-electric-500/10 transition-all"
           >
             View All Services <ArrowRight size={16} />
           </Link>

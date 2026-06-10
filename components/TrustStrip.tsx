@@ -12,7 +12,7 @@ export default function TrustStrip() {
   const doubled = [...ITEMS, ...ITEMS]
   return (
     <div
-      className="py-4 overflow-hidden border-y border-electric-500/15 bg-navy-900/60"
+      className="py-4 overflow-hidden border-y border-gray-200 dark:border-electric-500/15 bg-gray-50 dark:bg-navy-900/60"
       aria-label="Trust indicators"
     >
       <div className="flex marquee-inner whitespace-nowrap">
@@ -21,9 +21,9 @@ export default function TrustStrip() {
           return (
             <div
               key={i}
-              className="inline-flex items-center gap-3 mx-8 text-sm text-silver-300 font-medium"
+              className="inline-flex items-center gap-3 mx-8 text-sm text-slate-600 dark:text-silver-300 font-medium"
             >
-              <Icon size={16} className="text-electric-400 shrink-0" aria-hidden="true" />
+              <Icon size={16} className="text-electric-500 dark:text-electric-400 shrink-0" aria-hidden="true" />
               <span>{item.label}</span>
               <span className="text-electric-500/40 ml-6">◆</span>
             </div>

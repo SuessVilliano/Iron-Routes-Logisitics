@@ -22,7 +22,7 @@ const FAQS = [
   },
   {
     q: 'Can I contact someone directly?',
-    a: 'Yes. Use our contact form or call our dispatch team directly. We prioritize fast responses to all freight inquiries.',
+    a: 'Yes. You can reach us by phone at +1 (470) 316-4312 or by email at contact@ironrouteslogistics.com. Use our contact form for detailed inquiries.',
   },
   {
     q: 'Does Iron Routes provide freight coordination for businesses?',
@@ -38,11 +38,11 @@ export default function FAQSection() {
   const [open, setOpen] = useState<number | null>(null)
 
   return (
-    <section className="py-20 bg-navy-900/50" aria-labelledby="faq-heading">
+    <section className="py-20 bg-gray-50 dark:bg-navy-900/50" aria-labelledby="faq-heading">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-12">
-          <span className="text-electric-400 text-xs font-bold tracking-widest uppercase mb-3 block">FAQ</span>
-          <h2 id="faq-heading" className="text-3xl sm:text-4xl font-extrabold text-white mb-4">
+          <span className="text-electric-500 dark:text-electric-400 text-xs font-bold tracking-widest uppercase mb-3 block">FAQ</span>
+          <h2 id="faq-heading" className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mb-4">
             Frequently Asked Questions
           </h2>
         </div>
@@ -52,7 +52,9 @@ export default function FAQSection() {
             <div
               key={i}
               className={`rounded-xl border transition-colors ${
-                open === i ? 'border-electric-500/40 bg-navy-800/80' : 'border-electric-500/10 bg-navy-800/40 hover:border-electric-500/25'
+                open === i
+                  ? 'border-electric-500/40 bg-white dark:bg-navy-800/80 shadow-sm dark:shadow-none'
+                  : 'border-gray-200 dark:border-electric-500/10 bg-white dark:bg-navy-800/40 hover:border-electric-500/30'
               }`}
               itemScope
               itemType="https://schema.org/Question"
@@ -64,11 +66,11 @@ export default function FAQSection() {
                 aria-expanded={open === i}
                 aria-controls={`faq-answer-${i}`}
               >
-                <span className="text-white font-semibold text-sm" itemProp="name">{faq.q}</span>
+                <span className="text-slate-900 dark:text-white font-semibold text-sm" itemProp="name">{faq.q}</span>
                 <motion.span
                   animate={{ rotate: open === i ? 180 : 0 }}
                   transition={{ duration: 0.2 }}
-                  className="shrink-0 text-electric-400"
+                  className="shrink-0 text-electric-500 dark:text-electric-400"
                 >
                   <ChevronDown size={18} aria-hidden="true" />
                 </motion.span>
@@ -86,7 +88,7 @@ export default function FAQSection() {
                     itemType="https://schema.org/Answer"
                     itemProp="acceptedAnswer"
                   >
-                    <p className="px-5 pb-5 text-silver-400 text-sm leading-relaxed border-t border-electric-500/10 pt-3" itemProp="text">
+                    <p className="px-5 pb-5 text-slate-500 dark:text-silver-400 text-sm leading-relaxed border-t border-gray-200 dark:border-electric-500/10 pt-3" itemProp="text">
                       {faq.a}
                     </p>
                   </motion.div>

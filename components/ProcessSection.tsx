@@ -11,7 +11,7 @@ const STEPS = [
 
 export default function ProcessSection() {
   return (
-    <section className="py-20 bg-navy-950" aria-labelledby="process-heading">
+    <section className="py-20 bg-white dark:bg-navy-950" aria-labelledby="process-heading">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -19,9 +19,9 @@ export default function ProcessSection() {
           viewport={{ once: true }}
           className="text-center mb-14"
         >
-          <span className="text-electric-400 text-xs font-bold tracking-widest uppercase mb-3 block">Simple Process</span>
-          <h2 id="process-heading" className="text-3xl sm:text-4xl font-extrabold text-white mb-4">How It Works</h2>
-          <p className="text-silver-400 max-w-xl mx-auto">Four straightforward steps from load request to delivered freight.</p>
+          <span className="text-electric-500 dark:text-electric-400 text-xs font-bold tracking-widest uppercase mb-3 block">Simple Process</span>
+          <h2 id="process-heading" className="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white mb-4">How It Works</h2>
+          <p className="text-slate-500 dark:text-silver-400 max-w-xl mx-auto">Four straightforward steps from load request to delivered freight.</p>
         </motion.div>
 
         {/* Desktop: horizontal */}
@@ -40,12 +40,12 @@ export default function ProcessSection() {
                 transition={{ delay: i * 0.15, duration: 0.5 }}
                 className="flex flex-col items-center text-center px-4"
               >
-                <div className="relative w-20 h-20 rounded-2xl bg-navy-800 border border-electric-500/30 flex flex-col items-center justify-center mb-4 shadow-lg shadow-electric-500/10 z-10">
-                  <span className="text-electric-400 font-bold font-mono text-xs mb-1">{step.num}</span>
-                  <Icon size={22} className="text-white" aria-hidden="true" />
+                <div className="relative w-20 h-20 rounded-2xl bg-gray-50 dark:bg-navy-800 border border-gray-200 dark:border-electric-500/30 flex flex-col items-center justify-center mb-4 shadow-md dark:shadow-electric-500/10 z-10">
+                  <span className="text-electric-500 dark:text-electric-400 font-bold font-mono text-xs mb-1">{step.num}</span>
+                  <Icon size={22} className="text-slate-700 dark:text-white" aria-hidden="true" />
                 </div>
-                <h3 className="text-white font-bold text-sm mb-2">{step.title}</h3>
-                <p className="text-silver-400 text-xs leading-relaxed">{step.desc}</p>
+                <h3 className="text-slate-900 dark:text-white font-bold text-sm mb-2">{step.title}</h3>
+                <p className="text-slate-500 dark:text-silver-400 text-xs leading-relaxed">{step.desc}</p>
               </motion.div>
             )
           })}
@@ -64,13 +64,13 @@ export default function ProcessSection() {
                 transition={{ delay: i * 0.1 }}
                 className="flex gap-4"
               >
-                <div className="shrink-0 w-14 h-14 rounded-xl bg-navy-800 border border-electric-500/30 flex flex-col items-center justify-center">
-                  <span className="text-electric-400 font-bold font-mono text-[10px]">{step.num}</span>
-                  <Icon size={18} className="text-white" aria-hidden="true" />
+                <div className="shrink-0 w-14 h-14 rounded-xl bg-gray-50 dark:bg-navy-800 border border-gray-200 dark:border-electric-500/30 flex flex-col items-center justify-center">
+                  <span className="text-electric-500 dark:text-electric-400 font-bold font-mono text-[10px]">{step.num}</span>
+                  <Icon size={18} className="text-slate-700 dark:text-white" aria-hidden="true" />
                 </div>
                 <div>
-                  <h3 className="text-white font-bold mb-1">{step.title}</h3>
-                  <p className="text-silver-400 text-sm leading-relaxed">{step.desc}</p>
+                  <h3 className="text-slate-900 dark:text-white font-bold mb-1">{step.title}</h3>
+                  <p className="text-slate-500 dark:text-silver-400 text-sm leading-relaxed">{step.desc}</p>
                 </div>
               </motion.div>
             )
