@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+:root {
+  --bg: #080f20;
+  --bg2: #0d1829;
+  --fg: #f0f4f8;
+  --fg2: #94a3b8;
+  --accent: #0a84ff;
+  --accent2: #00e5ff;
+  --border: rgba(10, 132, 255, 0.2);
+  --card-bg: rgba(13, 24, 41, 0.8);
+}
+
+[data-theme="light"] {
+  --bg: #f0f4f8;
+  --bg2: #e2e8f0;
+  --fg: #080f20;
+  --fg2: #334155;
+  --accent: #0a84ff;
+  --accent2: #0077cc;
+  --border: rgba(10, 132, 255, 0.3);
+  --card-bg: rgba(255, 255, 255, 0.9);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-color: var(--bg);
+  color: var(--fg);
+  font-family: 'Inter', system-ui, sans-serif;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Animated grid/route pattern */
+.grid-pattern {
+  background-image:
+    linear-gradient(rgba(10, 132, 255, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(10, 132, 255, 0.06) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+
+[data-theme="light"] .grid-pattern {
+  background-image:
+    linear-gradient(rgba(10, 132, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(10, 132, 255, 0.08) 1px, transparent 1px);
+}
+
+.glow-border {
+  box-shadow: 0 0 20px rgba(10, 132, 255, 0.25), inset 0 0 20px rgba(10, 132, 255, 0.03);
+  border: 1px solid rgba(10, 132, 255, 0.3);
+}
+
+.glow-text {
+  text-shadow: 0 0 30px rgba(10, 132, 255, 0.5);
+}
+
+.card-hover {
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.card-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(10, 132, 255, 0.2), 0 0 0 1px rgba(10, 132, 255, 0.3);
+}
+
+/* Route animation dot */
+@keyframes routeDot {
+  0% { left: 0; opacity: 0; }
+  10% { opacity: 1; }
+  90% { opacity: 1; }
+  100% { left: calc(100% - 12px); opacity: 0; }
+}
+
+.route-dot {
+  animation: routeDot 3s ease-in-out infinite;
+}
+
+/* Marquee strip */
+@keyframes marqueeScroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+
+.marquee-inner {
+  animation: marqueeScroll 25s linear infinite;
+}
